@@ -2,12 +2,12 @@ function [U,V] = solveUV(X,Uinit,Vinit,nClass)
 % Using K-means to update U and V
 %  min_U,V  ||X-U*V||_F^2
 %    s.t.   V>=0, V*V'=I
-% Input£º
+% Input:
 %       X       -each column is a data point
 %       Uinit   -an initialization of U
 %       Vinit   -an initialization of V
 %       nClass  -total number of clusters
-% Output£º
+% Output:
 %       U       -each column is a basis
 %       V       -each column is a non-negative orthogonal coefficient
 
