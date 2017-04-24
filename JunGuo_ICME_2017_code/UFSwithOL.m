@@ -15,9 +15,9 @@ function [W,V,feaIdx,valVec] = UFSwithOL(X,nClass,para)
 % Input:
 %       X        -each column is a sample; each row is a feature
 %       nClass   -total number of clusters
-%       para.p0  -'sample' & 'feature' -level ordinal locality
-%                 'sample'-level is just the main content of our paper
-%                 'feature'-level is proposed at the end of conclusion
+%       para.p0  -'sample' & 'feature' -wise ordinal locality
+%                 'sample'-wise is just the main content of our paper
+%                 'feature'-wise is proposed at the end of conclusion
 %       para.p1  -regularization parameter: alpha*Tr(W'*...*W) 
 %       para.p2  -regularization parameter: beta*||W||_2,1
 % Output:
