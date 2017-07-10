@@ -9,7 +9,7 @@ Please cite our work if you find these resources helpful.
         title = {Unsupervised Feature Selection with Ordinal Locality},
         booktitle = {Proc. IEEE Int. Conf. Multimedia Expo (ICME)},  
         address = {Hong Kong, China},  
-        pages = { }, 
+        pages = {1213-1218}, 
         month = {Jul.},
         year = {2017}
     }
