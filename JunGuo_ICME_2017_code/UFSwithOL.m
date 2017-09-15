@@ -32,7 +32,7 @@ function [W,V,feaIdx,valVec] = UFSwithOL(X,nClass,para)
 %   title = {Unsupervised Feature Selection with Ordinal Locality},
 %   booktitle = {Proc. IEEE Int. Conf. Multimedia Expo (ICME)},
 %   address = {Hong Kong, China},
-%   pages = {},
+%   pages = {1213-1218},
 %   month = {Jul.},
 %   year = {2017}
 % }
