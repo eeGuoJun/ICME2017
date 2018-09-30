@@ -1,11 +1,5 @@
 function [W,V,feaIdx,valVec] = UFSwithOL(X,nClass,para) 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Descripion: 
-% This function implements Algorithm 1 of our paper
-% Jun Guo, Yanqing Guo, Xiangwei Kong, and Ran He, 
-% "Unsupervised Feature Selection with Ordinal Locality," In ICME 2017.
-%   -Source code version 1.0  2017/04/25 by Jun Guo
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Note: 
 % Users need to set the struct 'para' in advance, e.g., 
 %   para.p0 = 'sample';
@@ -25,18 +19,6 @@ function [W,V,feaIdx,valVec] = UFSwithOL(X,nClass,para)
 %       V        -each column is a non-negative orthogonal coefficient
 %       feaIdx   -indices of selected dimensions in original data
 %       valVec   -storing objective function values in each iteration
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Please cite our work if you find the code helpful.
-% @inproceedings{JunGuo_ICME_2017,
-%   author = {J. Guo and Y. Guo and X. Kong and R. He},
-%   title = {Unsupervised Feature Selection with Ordinal Locality},
-%   booktitle = {Proc. IEEE Int. Conf. Multimedia Expo (ICME)},
-%   address = {Hong Kong, China},
-%   pages = {1213-1218},
-%   month = {Jul.},
-%   year = {2017}
-% }
-% If you have problems, please contact us at eeguojun@outlook.com
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -86,7 +68,7 @@ while iter <= max_Iter
     [U,V] = solveUV(Winit'*X,Uinit,Vinit,nClass);
     
     % update W
-    Temp1 = beta*R + X*X'-X*(V'*V)*X' + alpha*L;
+	Temp1 = beta*R + X*X'-X*(V'*V)*X' + alpha*L;
     Temp1 = 0.5*(Temp1+Temp1');
     [eigV,eigD] = eig(Temp1);
     [~,eigI] = sort(diag(eigD),'ascend');
