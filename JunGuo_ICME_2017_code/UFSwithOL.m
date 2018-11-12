@@ -68,7 +68,7 @@ while iter <= max_Iter
     [U,V] = solveUV(Winit'*X,Uinit,Vinit,nClass);
     
     % update W
-	Temp1 = beta*R + X*X'-X*(V'*V)*X' + alpha*L;
+    Temp1 = beta*R + X*X'-X*(V'*V)*X' + alpha*L;
     Temp1 = 0.5*(Temp1+Temp1');
     [eigV,eigD] = eig(Temp1);
     [~,eigI] = sort(diag(eigD),'ascend');
